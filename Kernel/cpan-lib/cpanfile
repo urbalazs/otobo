@@ -28,7 +28,7 @@ requires 'Class::ReturnValue', '== 0.55';
 requires 'CPAN::Audit', '== 20250829.001';
 
 # database of adbisories used by CPAN::Audit
-requires 'CPANSA::DB', '== 20251221.001';
+requires 'CPANSA::DB', '== 20260110.003';
 
 # needed by CPAN::Audit
 requires 'CPAN::DistnameInfo', '== 0.12';
@@ -121,6 +121,9 @@ requires 'Net::HTTP', '== 6.17';
 
 # needed by Kernel::System::MailAccount::IMAP, removed in OTOBO 11.1.x
 requires 'Net::IMAP::Simple', '== 1.2209';
+
+# needed by OTOBO email modules, removed in OTOBO 11.1.x
+requires 'Net::SSLGlue', '== 1.058';
 
 # needed by Kernel::System::PDF
 requires 'PDF::API2', '== 2.048';

@@ -2,7 +2,7 @@
 # OTOBO is a web-based ticketing system for service organisations.
 # --
 # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
-# Copyright (C) 2019-2025 Rother OSS GmbH, https://otobo.io/
+# Copyright (C) 2019-2026 Rother OSS GmbH, https://otobo.io/
 # --
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -285,6 +285,13 @@ my @Certificates = (
         PrivateSecretFileName => 'SMIMEPrivateKeyPass-3.asc',
     },
     {
+        CertificateName       => 'Check4',
+        CertificateHash       => $Check3Hash,
+        CertificateFileName   => 'SMIMECertificate-4.asc',
+        PrivateKeyFileName    => 'SMIMEPrivateKey-4.asc',
+        PrivateSecretFileName => 'SMIMEPrivateKeyPass-4.asc',
+    },
+    {
         CertificateName       => 'OTOBOUserCert',
         CertificateHash       => $AxelCertHash,
         CertificateFileName   => 'SMIMEUserCertificate-Axel.crt',
@@ -539,7 +546,7 @@ my @Tests = (
         FixedTimeSet => 1,
         Data         => {
             Events                   => [ 'TicketDynamicFieldUpdate_DFT1' . $RandomID . 'Update' ],
-            RecipientEmail           => ['unittest@example.org'],
+            RecipientEmail           => ['unittest_expired@example.org'],
             EmailSecuritySettings    => ['1'],
             EmailSigningCrypting     => ['SMIMECrypt'],
             EmailMissingCryptingKeys => ['Skip'],
@@ -552,7 +559,7 @@ my @Tests = (
         FixedTimeSet => 1,
         Data         => {
             Events                   => [ 'TicketDynamicFieldUpdate_DFT1' . $RandomID . 'Update' ],
-            RecipientEmail           => ['unittest@example.org'],
+            RecipientEmail           => ['unittest_expired@example.org'],
             EmailSecuritySettings    => ['1'],
             EmailSigningCrypting     => ['SMIMECrypt'],
             EmailMissingCryptingKeys => ['Send'],
@@ -565,7 +572,7 @@ my @Tests = (
         FixedTimeSet => 1,
         Data         => {
             Events                   => [ 'TicketDynamicFieldUpdate_DFT1' . $RandomID . 'Update' ],
-            RecipientEmail           => ['unittest@example.org'],
+            RecipientEmail           => ['unittest_expired@example.org'],
             EmailSecuritySettings    => ['1'],
             EmailSigningCrypting     => ['SMIMESignCrypt'],
             EmailMissingCryptingKeys => ['Skip'],
@@ -578,7 +585,7 @@ my @Tests = (
         FixedTimeSet => 1,
         Data         => {
             Events                   => [ 'TicketDynamicFieldUpdate_DFT1' . $RandomID . 'Update' ],
-            RecipientEmail           => ['unittest@example.org'],
+            RecipientEmail           => ['unittest_expired@example.org'],
             EmailSecuritySettings    => ['1'],
             EmailSigningCrypting     => ['SMIMESignCrypt'],
             EmailMissingCryptingKeys => ['Send'],

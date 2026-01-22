@@ -2,7 +2,7 @@
 # OTOBO is a web-based ticketing system for service organisations.
 # --
 # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
-# Copyright (C) 2019-2025 Rother OSS GmbH, https://otobo.io/
+# Copyright (C) 2019-2026 Rother OSS GmbH, https://otobo.io/
 # --
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -251,7 +251,7 @@ sub Run {
                 if ( !$Result || !defined $Result->{Successful} ) {
                     $Result->{Successful} = 0;
                     $Result->{Message}    = $AJAXTask;
-                    $Result->{Comment}    = 'A fatal error occured.';
+                    $Result->{Comment}    = 'A fatal error occurred.';
 
                     $Kernel::OM->Get('Kernel::System::Log')->Log(
                         Priority => 'error',
@@ -647,7 +647,7 @@ sub _TaskError {
     );
 
     return {
-        Message => "An error occured.",
+        Message => "An error occurred.",
         Comment => "Task '$Task' not defined for $Self->{Subaction}!",
         Success => 0,
     };

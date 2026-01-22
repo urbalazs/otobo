@@ -1,5 +1,5 @@
-# created by util/generate at Sun Dec 21 03:59:00 2025
-# https://github.com/briandfoy/cpan-security-advisory 9a496cbd5787a2720729659e05d02bd236bdd710
+# created by util/generate at Sun Jan 11 00:51:43 2026
+# https://github.com/briandfoy/cpan-security-advisory.git 46cd42c1918e6aaa640d58e2264d2e12d00aa447
 
 =encoding utf8
 
@@ -82,7 +82,7 @@ package CPANSA::DB;
 use strict;
 use warnings;
 
-our $VERSION = '20251221.001';
+our $VERSION = '20260110.003';
 
 sub db {
 	{
@@ -5093,6 +5093,14 @@ sub db {
                                                            {
                                                              'date' => '2025-12-16T12:26:36',
                                                              'version' => '2.097000'
+                                                           },
+                                                           {
+                                                             'date' => '2026-01-08T22:37:02',
+                                                             'version' => '2.097001'
+                                                           },
+                                                           {
+                                                             'date' => '2026-01-09T10:32:45',
+                                                             'version' => '2.097002'
                                                            }
                                                          ]
                                          },
@@ -12538,7 +12546,7 @@ sub db {
                                                    {
                                                      'date' => '2017-02-20T00:00:00',
                                                      'dual_lived' => 1,
-                                                     'perl_release' => '5.02501',
+                                                     'perl_release' => '5.025010',
                                                      'version' => '2.17'
                                                    },
                                                    {
@@ -15575,7 +15583,7 @@ sub db {
                                                                  {
                                                                    'date' => '2023-07-02T00:00:00',
                                                                    'dual_lived' => 1,
-                                                                   'perl_release' => '5.038000',
+                                                                   'perl_release' => '5.038',
                                                                    'version' => '2.204_001'
                                                                  }
                                                                ]
@@ -16303,7 +16311,7 @@ sub db {
                                                                 {
                                                                   'date' => '2023-07-02T00:00:00',
                                                                   'dual_lived' => 1,
-                                                                  'perl_release' => '5.038000',
+                                                                  'perl_release' => '5.038',
                                                                   'version' => '2.204_001'
                                                                 }
                                                               ]
@@ -20341,6 +20349,134 @@ sub db {
                                                          }
                                                        ]
                                        },
+                       'Crypt-Sodium-XS' => {
+                                              'advisories' => [
+                                                                {
+                                                                  'affected_versions' => [
+                                                                                           '<0.000042'
+                                                                                         ],
+                                                                  'cves' => [
+                                                                              'CVE-2025-15444'
+                                                                            ],
+                                                                  'description' => "Crypt::Sodium::XS module versions prior to\x{a0}0.000042,\x{a0}for Perl, include a vulnerable version of libsodium  libsodium <= 1.0.20 or a version of libsodium released before December 30, 2025 contains a vulnerability documented as CVE-2025-69277\x{a0} https://www.cve.org/CVERecord?id=CVE-2025-69277 .  The libsodium vulnerability states:  In atypical use cases involving certain custom cryptography or untrusted data to crypto_core_ed25519_is_valid_point, mishandles checks for whether an elliptic curve point is valid because it sometimes allows points that aren't in the main cryptographic group.  0.000042 includes a version of\x{a0}libsodium updated to 1.0.20-stable, released January 3, 2026, which includes a fix for the vulnerability.",
+                                                                  'distribution' => 'Crypt-Sodium-XS',
+                                                                  'embedded_vulnerability' => {
+                                                                                                'distributed_version' => '<-1.0.20',
+                                                                                                'name' => 'libsodium'
+                                                                                              },
+                                                                  'fixed_versions' => [
+                                                                                        '>=0.000042'
+                                                                                      ],
+                                                                  'id' => 'CPANSA-Crypt-Sodium-XS-2025-15444',
+                                                                  'references' => [
+                                                                                    'https://00f.net/2025/12/30/libsodium-vulnerability/',
+                                                                                    'https://github.com/jedisct1/libsodium/commit/ad3004ec8731730e93fcfbbc824e67eadc1c1bae',
+                                                                                    'https://metacpan.org/dist/Crypt-Sodium-XS/changes'
+                                                                                  ],
+                                                                  'reported' => '2026-01-06',
+                                                                  'severity' => undef
+                                                                }
+                                                              ],
+                                              'main_module' => 'Crypt::Sodium::XS',
+                                              'versions' => [
+                                                              {
+                                                                'date' => '2025-07-06T21:01:50',
+                                                                'version' => '0.000018'
+                                                              },
+                                                              {
+                                                                'date' => '2025-07-07T16:16:33',
+                                                                'version' => '0.000019'
+                                                              },
+                                                              {
+                                                                'date' => '2025-07-08T01:32:47',
+                                                                'version' => '0.000020'
+                                                              },
+                                                              {
+                                                                'date' => '2025-07-08T02:22:03',
+                                                                'version' => '0.000021'
+                                                              },
+                                                              {
+                                                                'date' => '2025-07-08T06:45:10',
+                                                                'version' => '0.000022'
+                                                              },
+                                                              {
+                                                                'date' => '2025-07-08T22:14:02',
+                                                                'version' => '0.000024'
+                                                              },
+                                                              {
+                                                                'date' => '2025-07-09T20:24:46',
+                                                                'version' => '0.000025'
+                                                              },
+                                                              {
+                                                                'date' => '2025-07-09T21:42:18',
+                                                                'version' => '0.000026'
+                                                              },
+                                                              {
+                                                                'date' => '2025-07-12T16:33:41',
+                                                                'version' => '0.000027'
+                                                              },
+                                                              {
+                                                                'date' => '2025-07-15T19:55:23',
+                                                                'version' => '0.000028'
+                                                              },
+                                                              {
+                                                                'date' => '2025-07-17T00:10:50',
+                                                                'version' => '0.000029'
+                                                              },
+                                                              {
+                                                                'date' => '2025-07-19T21:47:23',
+                                                                'version' => '0.000030'
+                                                              },
+                                                              {
+                                                                'date' => '2025-07-21T15:02:40',
+                                                                'version' => '0.000031'
+                                                              },
+                                                              {
+                                                                'date' => '2025-07-23T23:48:57',
+                                                                'version' => '0.000032'
+                                                              },
+                                                              {
+                                                                'date' => '2025-07-24T20:46:46',
+                                                                'version' => '0.000033'
+                                                              },
+                                                              {
+                                                                'date' => '2025-08-01T19:01:56',
+                                                                'version' => '0.000034'
+                                                              },
+                                                              {
+                                                                'date' => '2025-08-02T00:09:58',
+                                                                'version' => '0.000035'
+                                                              },
+                                                              {
+                                                                'date' => '2025-08-03T14:55:38',
+                                                                'version' => '0.000036'
+                                                              },
+                                                              {
+                                                                'date' => '2025-08-05T21:41:13',
+                                                                'version' => '0.000037'
+                                                              },
+                                                              {
+                                                                'date' => '2025-08-09T18:31:17',
+                                                                'version' => '0.000038'
+                                                              },
+                                                              {
+                                                                'date' => '2025-08-21T06:03:08',
+                                                                'version' => '0.000039'
+                                                              },
+                                                              {
+                                                                'date' => '2025-12-04T06:38:40',
+                                                                'version' => '0.000040'
+                                                              },
+                                                              {
+                                                                'date' => '2025-12-05T05:32:25',
+                                                                'version' => '0.000041'
+                                                              },
+                                                              {
+                                                                'date' => '2026-01-04T09:58:53',
+                                                                'version' => '0.000042'
+                                                              }
+                                                            ]
+                                            },
                        'CryptX' => {
                                      'advisories' => [
                                                        {
@@ -28420,6 +28556,14 @@ sub db {
                                                          {
                                                            'date' => '2025-11-24T08:08:46',
                                                            'version' => '1.77_02'
+                                                         },
+                                                         {
+                                                           'date' => '2025-12-27T02:02:17',
+                                                           'version' => '1.77_03'
+                                                         },
+                                                         {
+                                                           'date' => '2026-01-02T01:23:08',
+                                                           'version' => '1.78'
                                                          }
                                                        ]
                                        },
@@ -32960,7 +33104,7 @@ sub db {
                                                           {
                                                             'date' => '2015-03-20T00:00:00',
                                                             'dual_lived' => 1,
-                                                            'perl_release' => '5.02101',
+                                                            'perl_release' => '5.021010',
                                                             'version' => '2.158'
                                                           },
                                                           {
@@ -33014,7 +33158,7 @@ sub db {
                                                           {
                                                             'date' => '2019-04-20T00:00:00',
                                                             'dual_lived' => 1,
-                                                            'perl_release' => '5.029010',
+                                                            'perl_release' => '5.02901',
                                                             'version' => '2.174'
                                                           },
                                                           {
@@ -33050,7 +33194,7 @@ sub db {
                                                           {
                                                             'date' => '2021-05-20T00:00:00',
                                                             'dual_lived' => 1,
-                                                            'perl_release' => '5.034',
+                                                            'perl_release' => '5.034000',
                                                             'version' => '2.179'
                                                           },
                                                           {
@@ -35360,7 +35504,7 @@ sub db {
                                                          {
                                                            'date' => '2023-07-02T00:00:00',
                                                            'dual_lived' => 1,
-                                                           'perl_release' => '5.038000',
+                                                           'perl_release' => '5.038',
                                                            'version' => '2.58_01'
                                                          }
                                                        ]
@@ -40534,7 +40678,7 @@ sub db {
                                                                  {
                                                                    'date' => '1994-10-17T00:00:00',
                                                                    'dual_lived' => 1,
-                                                                   'perl_release' => '5.000',
+                                                                   'perl_release' => 5,
                                                                    'version' => undef
                                                                  },
                                                                  {
@@ -40576,7 +40720,7 @@ sub db {
                                                                  {
                                                                    'date' => '2000-03-22T00:00:00',
                                                                    'dual_lived' => 1,
-                                                                   'perl_release' => '5.006000',
+                                                                   'perl_release' => '5.006',
                                                                    'version' => '5.45'
                                                                  },
                                                                  {
@@ -41047,6 +41191,10 @@ sub db {
                                                                  'version' => '3.60'
                                                                },
                                                                {
+                                                                 'date' => '2026-01-09T17:11:34',
+                                                                 'version' => '3.61'
+                                                               },
+                                                               {
                                                                  'date' => '2006-01-28T00:00:00',
                                                                  'dual_lived' => 1,
                                                                  'perl_release' => '5.009003',
@@ -41103,7 +41251,7 @@ sub db {
                                                                {
                                                                  'date' => '2012-05-26T00:00:00',
                                                                  'dual_lived' => 1,
-                                                                 'perl_release' => '5.017',
+                                                                 'perl_release' => '5.017000',
                                                                  'version' => '3.17'
                                                                },
                                                                {
@@ -41187,7 +41335,7 @@ sub db {
                                                                {
                                                                  'date' => '2018-03-20T00:00:00',
                                                                  'dual_lived' => 1,
-                                                                 'perl_release' => '5.02701',
+                                                                 'perl_release' => '5.027010',
                                                                  'version' => '3.39'
                                                                },
                                                                {
@@ -42842,7 +42990,7 @@ sub db {
                                                         {
                                                           'date' => '2000-03-22T00:00:00',
                                                           'dual_lived' => 1,
-                                                          'perl_release' => '5.006000',
+                                                          'perl_release' => '5.006',
                                                           'version' => '1.0403'
                                                         },
                                                         {
@@ -42890,7 +43038,7 @@ sub db {
                                                         {
                                                           'date' => '2016-05-09T00:00:00',
                                                           'dual_lived' => 1,
-                                                          'perl_release' => '5.024000',
+                                                          'perl_release' => '5.024',
                                                           'version' => '2.12_01'
                                                         }
                                                       ]
@@ -44169,6 +44317,10 @@ sub db {
                                                  {
                                                    'date' => '2024-06-23T15:46:01',
                                                    'version' => '2.83'
+                                                 },
+                                                 {
+                                                   'date' => '2026-01-04T19:40:59',
+                                                   'version' => '2.84'
                                                  }
                                                ]
                                },
@@ -47742,6 +47894,10 @@ Resulting in a CWE-1188: Insecure Default Initialization of Resource weakness.
                                                           'version' => '0.091'
                                                         },
                                                         {
+                                                          'date' => '2025-12-27T19:51:28',
+                                                          'version' => '0.092'
+                                                        },
+                                                        {
                                                           'date' => '2017-01-14T00:00:00',
                                                           'dual_lived' => 1,
                                                           'perl_release' => '5.022003',
@@ -49646,6 +49802,18 @@ Resulting in a CWE-1188: Insecure Default Initialization of Resource weakness.
                                                             {
                                                               'date' => '2025-07-10T16:57:04',
                                                               'version' => '2.095'
+                                                            },
+                                                            {
+                                                              'date' => '2026-01-04T17:47:18',
+                                                              'version' => '2.096'
+                                                            },
+                                                            {
+                                                              'date' => '2026-01-06T17:52:56',
+                                                              'version' => '2.097'
+                                                            },
+                                                            {
+                                                              'date' => '2026-01-06T19:20:57',
+                                                              'version' => '2.098'
                                                             }
                                                           ]
                                           },
@@ -82478,7 +82646,7 @@ Resulting in a CWE-1188: Insecure Default Initialization of Resource weakness.
                                                         {
                                                           'date' => '1994-10-17T00:00:00',
                                                           'dual_lived' => 1,
-                                                          'perl_release' => '5.000',
+                                                          'perl_release' => 5,
                                                           'version' => undef
                                                         },
                                                         {
@@ -82496,7 +82664,7 @@ Resulting in a CWE-1188: Insecure Default Initialization of Resource weakness.
                                                         {
                                                           'date' => '2000-03-22T00:00:00',
                                                           'dual_lived' => 1,
-                                                          'perl_release' => '5.006000',
+                                                          'perl_release' => '5.006',
                                                           'version' => '2.02'
                                                         },
                                                         {
@@ -82538,7 +82706,7 @@ Resulting in a CWE-1188: Insecure Default Initialization of Resource weakness.
                                                         {
                                                           'date' => '2009-10-02T00:00:00',
                                                           'dual_lived' => 1,
-                                                          'perl_release' => '5.011',
+                                                          'perl_release' => '5.011000',
                                                           'version' => '3.3002'
                                                         },
                                                         {
@@ -82640,7 +82808,7 @@ Resulting in a CWE-1188: Insecure Default Initialization of Resource weakness.
                                                         {
                                                           'date' => '2015-03-20T00:00:00',
                                                           'dual_lived' => 1,
-                                                          'perl_release' => '5.02101',
+                                                          'perl_release' => '5.021010',
                                                           'version' => '3.55'
                                                         },
                                                         {
@@ -82736,7 +82904,7 @@ Resulting in a CWE-1188: Insecure Default Initialization of Resource weakness.
                                                         {
                                                           'date' => '2019-04-20T00:00:00',
                                                           'dual_lived' => 1,
-                                                          'perl_release' => '5.029010',
+                                                          'perl_release' => '5.02901',
                                                           'version' => '3.78'
                                                         },
                                                         {
@@ -83146,6 +83314,10 @@ Resulting in a CWE-1188: Insecure Default Initialization of Resource weakness.
                                                         {
                                                           'date' => '2025-09-12T13:54:29',
                                                           'version' => '20250912'
+                                                        },
+                                                        {
+                                                          'date' => '2026-01-08T14:58:18',
+                                                          'version' => '20260109'
                                                         }
                                                       ]
                                       },
@@ -89741,7 +89913,7 @@ Resulting in a CWE-1188: Insecure Default Initialization of Resource weakness.
                                                    {
                                                      'date' => '2012-05-20T00:00:00',
                                                      'dual_lived' => 1,
-                                                     'perl_release' => '5.016000',
+                                                     'perl_release' => '5.016',
                                                      'version' => '2.31_01'
                                                    },
                                                    {
@@ -92757,7 +92929,7 @@ Resulting in a CWE-1188: Insecure Default Initialization of Resource weakness.
                                                      {
                                                        'date' => '1994-10-17T00:00:00',
                                                        'dual_lived' => 1,
-                                                       'perl_release' => '5.000',
+                                                       'perl_release' => 5,
                                                        'version' => undef
                                                      },
                                                      {
@@ -92775,7 +92947,7 @@ Resulting in a CWE-1188: Insecure Default Initialization of Resource weakness.
                                                      {
                                                        'date' => '2000-03-22T00:00:00',
                                                        'dual_lived' => 1,
-                                                       'perl_release' => '5.006000',
+                                                       'perl_release' => '5.006',
                                                        'version' => '1.72'
                                                      },
                                                      {
@@ -92829,7 +93001,7 @@ Resulting in a CWE-1188: Insecure Default Initialization of Resource weakness.
                                                      {
                                                        'date' => '2009-10-02T00:00:00',
                                                        'dual_lived' => 1,
-                                                       'perl_release' => '5.011',
+                                                       'perl_release' => '5.011000',
                                                        'version' => '1.84'
                                                      },
                                                      {
@@ -92847,7 +93019,7 @@ Resulting in a CWE-1188: Insecure Default Initialization of Resource weakness.
                                                      {
                                                        'date' => '2010-04-12T00:00:00',
                                                        'dual_lived' => 1,
-                                                       'perl_release' => '5.012000',
+                                                       'perl_release' => '5.012',
                                                        'version' => '1.87'
                                                      },
                                                      {
@@ -95194,7 +95366,7 @@ Resulting in a CWE-1188: Insecure Default Initialization of Resource weakness.
                                                        {
                                                          'date' => '2017-02-20T00:00:00',
                                                          'dual_lived' => 1,
-                                                         'perl_release' => '5.02501',
+                                                         'perl_release' => '5.025010',
                                                          'version' => '2.62'
                                                        },
                                                        {
@@ -95326,7 +95498,7 @@ Resulting in a CWE-1188: Insecure Default Initialization of Resource weakness.
                                                        {
                                                          'date' => '2023-07-02T00:00:00',
                                                          'dual_lived' => 1,
-                                                         'perl_release' => '5.038000',
+                                                         'perl_release' => '5.038',
                                                          'version' => '3.32'
                                                        },
                                                        {
@@ -95818,13 +95990,13 @@ Resulting in a CWE-1188: Insecure Default Initialization of Resource weakness.
                                                          {
                                                            'date' => '1994-10-17T00:00:00',
                                                            'dual_lived' => 1,
-                                                           'perl_release' => '5.000',
+                                                           'perl_release' => 5,
                                                            'version' => undef
                                                          },
                                                          {
                                                            'date' => '2000-03-22T00:00:00',
                                                            'dual_lived' => 1,
-                                                           'perl_release' => '5.006000',
+                                                           'perl_release' => '5.006',
                                                            'version' => '0.01'
                                                          },
                                                          {
@@ -103693,6 +103865,545 @@ Resulting in a CWE-1188: Insecure Default Initialization of Resource weakness.
                                                            }
                                                          ]
                                          },
+                       'YAML-Syck' => {
+                                        'advisories' => [
+                                                          {
+                                                            'affected_versions' => [
+                                                                                     '<1.36'
+                                                                                   ],
+                                                            'cves' => [
+                                                                        'CVE-2025-11683'
+                                                                      ],
+                                                            'description' => "YAML::Syck versions before 1.36 for Perl has missing null-terminators which causes out-of-bounds read and potential information disclosure  Missing null terminators in token.c leads to but-of-bounds read which allows adjacent variable to be read  The issue is seen with complex YAML files with a hash of all keys and empty values.\x{a0} There is no indication that the issue leads to accessing memory outside that allocated to the module.",
+                                                            'distribution' => 'YAML-Syck',
+                                                            'fixed_versions' => [
+                                                                                  '>=1.36'
+                                                                                ],
+                                                            'id' => 'CPANSA-YAML-Syck-2025-11683',
+                                                            'references' => [
+                                                                              'https://github.com/cpan-authors/YAML-Syck/pull/65',
+                                                                              'https://metacpan.org/dist/YAML-Syck/changes'
+                                                                            ],
+                                                            'reported' => '2025-10-16',
+                                                            'severity' => undef
+                                                          }
+                                                        ],
+                                        'main_module' => 'YAML::Syck',
+                                        'versions' => [
+                                                        {
+                                                          'date' => '2005-12-25T17:59:15',
+                                                          'version' => '0.01'
+                                                        },
+                                                        {
+                                                          'date' => '2005-12-26T12:10:56',
+                                                          'version' => '0.02'
+                                                        },
+                                                        {
+                                                          'date' => '2005-12-27T15:53:07',
+                                                          'version' => '0.03'
+                                                        },
+                                                        {
+                                                          'date' => '2005-12-28T12:16:03',
+                                                          'version' => '0.04'
+                                                        },
+                                                        {
+                                                          'date' => '2006-01-08T15:54:21',
+                                                          'version' => '0.05'
+                                                        },
+                                                        {
+                                                          'date' => '2006-01-08T16:03:43',
+                                                          'version' => '0.06'
+                                                        },
+                                                        {
+                                                          'date' => '2006-01-08T16:25:54',
+                                                          'version' => '0.07'
+                                                        },
+                                                        {
+                                                          'date' => '2006-01-08T16:38:52',
+                                                          'version' => '0.08'
+                                                        },
+                                                        {
+                                                          'date' => '2006-01-08T16:42:46',
+                                                          'version' => '0.09'
+                                                        },
+                                                        {
+                                                          'date' => '2006-01-08T17:13:31',
+                                                          'version' => '0.10'
+                                                        },
+                                                        {
+                                                          'date' => '2006-01-08T17:22:15',
+                                                          'version' => '0.11'
+                                                        },
+                                                        {
+                                                          'date' => '2006-01-09T04:57:24',
+                                                          'version' => '0.12'
+                                                        },
+                                                        {
+                                                          'date' => '2006-01-09T05:44:42',
+                                                          'version' => '0.13'
+                                                        },
+                                                        {
+                                                          'date' => '2006-01-09T16:03:57',
+                                                          'version' => '0.14'
+                                                        },
+                                                        {
+                                                          'date' => '2006-01-10T10:57:02',
+                                                          'version' => '0.15'
+                                                        },
+                                                        {
+                                                          'date' => '2006-01-10T11:57:08',
+                                                          'version' => '0.16'
+                                                        },
+                                                        {
+                                                          'date' => '2006-01-10T12:28:26',
+                                                          'version' => '0.17'
+                                                        },
+                                                        {
+                                                          'date' => '2006-01-10T12:49:52',
+                                                          'version' => '0.18'
+                                                        },
+                                                        {
+                                                          'date' => '2006-01-10T15:52:23',
+                                                          'version' => '0.19'
+                                                        },
+                                                        {
+                                                          'date' => '2006-01-11T11:18:16',
+                                                          'version' => '0.20'
+                                                        },
+                                                        {
+                                                          'date' => '2006-01-11T12:36:14',
+                                                          'version' => '0.21'
+                                                        },
+                                                        {
+                                                          'date' => '2006-01-11T18:44:14',
+                                                          'version' => '0.22'
+                                                        },
+                                                        {
+                                                          'date' => '2006-01-14T11:44:53',
+                                                          'version' => '0.23'
+                                                        },
+                                                        {
+                                                          'date' => '2006-01-14T12:21:56',
+                                                          'version' => '0.24'
+                                                        },
+                                                        {
+                                                          'date' => '2006-01-15T07:45:04',
+                                                          'version' => '0.25'
+                                                        },
+                                                        {
+                                                          'date' => '2006-01-15T18:03:09',
+                                                          'version' => '0.26'
+                                                        },
+                                                        {
+                                                          'date' => '2006-01-15T19:16:11',
+                                                          'version' => '0.27'
+                                                        },
+                                                        {
+                                                          'date' => '2006-01-16T09:58:39',
+                                                          'version' => '0.28'
+                                                        },
+                                                        {
+                                                          'date' => '2006-02-05T03:50:47',
+                                                          'version' => '0.29'
+                                                        },
+                                                        {
+                                                          'date' => '2006-02-06T12:54:49',
+                                                          'version' => '0.30'
+                                                        },
+                                                        {
+                                                          'date' => '2006-02-10T19:25:13',
+                                                          'version' => '0.31'
+                                                        },
+                                                        {
+                                                          'date' => '2006-02-11T11:00:16',
+                                                          'version' => '0.32'
+                                                        },
+                                                        {
+                                                          'date' => '2006-02-15T11:53:00',
+                                                          'version' => '0.33'
+                                                        },
+                                                        {
+                                                          'date' => '2006-03-06T23:28:23',
+                                                          'version' => '0.34'
+                                                        },
+                                                        {
+                                                          'date' => '2006-03-09T13:11:32',
+                                                          'version' => '0.35'
+                                                        },
+                                                        {
+                                                          'date' => '2006-03-10T10:27:01',
+                                                          'version' => '0.36'
+                                                        },
+                                                        {
+                                                          'date' => '2006-03-14T01:19:25',
+                                                          'version' => '0.37'
+                                                        },
+                                                        {
+                                                          'date' => '2006-03-14T12:44:44',
+                                                          'version' => '0.38'
+                                                        },
+                                                        {
+                                                          'date' => '2006-03-31T07:32:11',
+                                                          'version' => '0.40'
+                                                        },
+                                                        {
+                                                          'date' => '2006-04-01T05:50:05',
+                                                          'version' => '0.41'
+                                                        },
+                                                        {
+                                                          'date' => '2006-04-25T13:07:17',
+                                                          'version' => '0.42'
+                                                        },
+                                                        {
+                                                          'date' => '2006-04-29T15:26:40',
+                                                          'version' => '0.43'
+                                                        },
+                                                        {
+                                                          'date' => '2006-05-03T18:04:03',
+                                                          'version' => '0.43'
+                                                        },
+                                                        {
+                                                          'date' => '2006-05-27T03:30:37',
+                                                          'version' => '0.45'
+                                                        },
+                                                        {
+                                                          'date' => '2006-06-24T22:55:59',
+                                                          'version' => '0.46_01'
+                                                        },
+                                                        {
+                                                          'date' => '2006-07-01T05:26:06',
+                                                          'version' => '0.60'
+                                                        },
+                                                        {
+                                                          'date' => '2006-07-01T14:03:38',
+                                                          'version' => '0.61'
+                                                        },
+                                                        {
+                                                          'date' => '2006-07-12T06:56:58',
+                                                          'version' => '0.62'
+                                                        },
+                                                        {
+                                                          'date' => '2006-07-20T19:19:13',
+                                                          'version' => '0.63'
+                                                        },
+                                                        {
+                                                          'date' => '2006-07-23T00:30:37',
+                                                          'version' => '0.64'
+                                                        },
+                                                        {
+                                                          'date' => '2006-07-29T16:47:56',
+                                                          'version' => '0.65'
+                                                        },
+                                                        {
+                                                          'date' => '2006-07-29T23:27:40',
+                                                          'version' => '0.66'
+                                                        },
+                                                        {
+                                                          'date' => '2006-07-30T01:00:36',
+                                                          'version' => '0.67'
+                                                        },
+                                                        {
+                                                          'date' => '2006-10-02T12:49:23',
+                                                          'version' => '0.70'
+                                                        },
+                                                        {
+                                                          'date' => '2006-10-03T15:25:46',
+                                                          'version' => '0.70'
+                                                        },
+                                                        {
+                                                          'date' => '2006-11-26T00:07:30',
+                                                          'version' => '0.72'
+                                                        },
+                                                        {
+                                                          'date' => '2007-01-25T19:36:14',
+                                                          'version' => '0.80'
+                                                        },
+                                                        {
+                                                          'date' => '2007-01-25T23:07:09',
+                                                          'version' => '0.81'
+                                                        },
+                                                        {
+                                                          'date' => '2007-01-25T23:22:51',
+                                                          'version' => '0.82'
+                                                        },
+                                                        {
+                                                          'date' => '2007-04-01T16:57:59',
+                                                          'version' => '0.84'
+                                                        },
+                                                        {
+                                                          'date' => '2007-04-20T14:49:50',
+                                                          'version' => '0.85'
+                                                        },
+                                                        {
+                                                          'date' => '2007-06-16T13:17:35',
+                                                          'version' => '0.86'
+                                                        },
+                                                        {
+                                                          'date' => '2007-06-16T16:51:23',
+                                                          'version' => '0.86'
+                                                        },
+                                                        {
+                                                          'date' => '2007-06-16T20:33:56',
+                                                          'version' => '0.86'
+                                                        },
+                                                        {
+                                                          'date' => '2007-06-21T19:55:23',
+                                                          'version' => '0.86'
+                                                        },
+                                                        {
+                                                          'date' => '2007-06-23T02:21:39',
+                                                          'version' => '0.86'
+                                                        },
+                                                        {
+                                                          'date' => '2007-07-10T01:11:34',
+                                                          'version' => '0.86'
+                                                        },
+                                                        {
+                                                          'date' => '2007-08-03T17:35:53',
+                                                          'version' => '0.86'
+                                                        },
+                                                        {
+                                                          'date' => '2007-08-07T17:25:31',
+                                                          'version' => '0.86'
+                                                        },
+                                                        {
+                                                          'date' => '2007-09-02T16:30:10',
+                                                          'version' => '0.86'
+                                                        },
+                                                        {
+                                                          'date' => '2007-10-13T13:58:17',
+                                                          'version' => '0.86'
+                                                        },
+                                                        {
+                                                          'date' => '2007-10-22T18:08:48',
+                                                          'version' => '0.86'
+                                                        },
+                                                        {
+                                                          'date' => '2007-12-09T21:14:09',
+                                                          'version' => '0.86'
+                                                        },
+                                                        {
+                                                          'date' => '2008-01-18T17:50:22',
+                                                          'version' => '0.86'
+                                                        },
+                                                        {
+                                                          'date' => '2008-02-16T12:20:10',
+                                                          'version' => '0.86'
+                                                        },
+                                                        {
+                                                          'date' => '2008-02-16T13:04:46',
+                                                          'version' => '0.86'
+                                                        },
+                                                        {
+                                                          'date' => '2008-02-16T16:13:51',
+                                                          'version' => '0.86'
+                                                        },
+                                                        {
+                                                          'date' => '2008-06-09T02:50:39',
+                                                          'version' => '0.86'
+                                                        },
+                                                        {
+                                                          'date' => '2009-04-25T03:38:49',
+                                                          'version' => '0.86'
+                                                        },
+                                                        {
+                                                          'date' => '2009-04-25T03:41:41',
+                                                          'version' => '0.86'
+                                                        },
+                                                        {
+                                                          'date' => '2010-05-20T10:41:25',
+                                                          'version' => '1.07_01'
+                                                        },
+                                                        {
+                                                          'date' => '2010-05-23T17:10:30',
+                                                          'version' => '1.08'
+                                                        },
+                                                        {
+                                                          'date' => '2010-05-23T17:48:37',
+                                                          'version' => '1.08_01'
+                                                        },
+                                                        {
+                                                          'date' => '2010-05-29T22:54:14',
+                                                          'version' => '1.09'
+                                                        },
+                                                        {
+                                                          'date' => '2010-06-06T21:44:15',
+                                                          'version' => '1.10'
+                                                        },
+                                                        {
+                                                          'date' => '2010-07-16T11:41:50',
+                                                          'version' => '1.10_01'
+                                                        },
+                                                        {
+                                                          'date' => '2010-07-19T17:41:06',
+                                                          'version' => '1.10_01'
+                                                        },
+                                                        {
+                                                          'date' => '2010-07-19T22:34:01',
+                                                          'version' => '1.10_01'
+                                                        },
+                                                        {
+                                                          'date' => '2010-07-19T23:55:46',
+                                                          'version' => '1.10_01'
+                                                        },
+                                                        {
+                                                          'date' => '2010-07-28T06:23:27',
+                                                          'version' => '1.10_01'
+                                                        },
+                                                        {
+                                                          'date' => '2010-07-29T21:34:27',
+                                                          'version' => '1.10_06'
+                                                        },
+                                                        {
+                                                          'date' => '2010-07-29T22:07:40',
+                                                          'version' => '1.10_07'
+                                                        },
+                                                        {
+                                                          'date' => '2010-08-03T15:06:07',
+                                                          'version' => '1.11'
+                                                        },
+                                                        {
+                                                          'date' => '2010-08-04T17:28:29',
+                                                          'version' => '1.12'
+                                                        },
+                                                        {
+                                                          'date' => '2010-08-26T18:14:47',
+                                                          'version' => '1.13'
+                                                        },
+                                                        {
+                                                          'date' => '2010-08-26T20:39:52',
+                                                          'version' => '1.14'
+                                                        },
+                                                        {
+                                                          'date' => '2010-09-23T12:20:14',
+                                                          'version' => '1.15'
+                                                        },
+                                                        {
+                                                          'date' => '2010-11-21T14:40:01',
+                                                          'version' => '1.16'
+                                                        },
+                                                        {
+                                                          'date' => '2010-11-21T16:43:16',
+                                                          'version' => '1.17'
+                                                        },
+                                                        {
+                                                          'date' => '2011-11-03T07:09:03',
+                                                          'version' => '1.17_01'
+                                                        },
+                                                        {
+                                                          'date' => '2011-11-05T19:16:14',
+                                                          'version' => '1.17_01'
+                                                        },
+                                                        {
+                                                          'date' => '2011-11-08T06:51:54',
+                                                          'version' => '1.17_01'
+                                                        },
+                                                        {
+                                                          'date' => '2012-02-11T09:48:37',
+                                                          'version' => '1.20_01'
+                                                        },
+                                                        {
+                                                          'date' => '2012-02-15T04:54:29',
+                                                          'version' => '1.20'
+                                                        },
+                                                        {
+                                                          'date' => '2012-08-22T21:49:37',
+                                                          'version' => '1.21_01'
+                                                        },
+                                                        {
+                                                          'date' => '2012-09-21T03:45:26',
+                                                          'version' => '1.21'
+                                                        },
+                                                        {
+                                                          'date' => '2012-11-28T00:21:05',
+                                                          'version' => '1.22_01'
+                                                        },
+                                                        {
+                                                          'date' => '2012-12-04T23:06:27',
+                                                          'version' => '1.22'
+                                                        },
+                                                        {
+                                                          'date' => '2013-02-21T20:13:43',
+                                                          'version' => '1.23_01'
+                                                        },
+                                                        {
+                                                          'date' => '2013-02-26T19:19:43',
+                                                          'version' => '1.23'
+                                                        },
+                                                        {
+                                                          'date' => '2013-03-02T07:57:56',
+                                                          'version' => '1.24_01'
+                                                        },
+                                                        {
+                                                          'date' => '2013-03-02T08:54:34',
+                                                          'version' => '1.24_02'
+                                                        },
+                                                        {
+                                                          'date' => '2013-03-07T16:44:31',
+                                                          'version' => '1.24'
+                                                        },
+                                                        {
+                                                          'date' => '2013-03-11T04:31:15',
+                                                          'version' => '1.25'
+                                                        },
+                                                        {
+                                                          'date' => '2013-05-21T03:09:18',
+                                                          'version' => '1.26'
+                                                        },
+                                                        {
+                                                          'date' => '2013-05-21T04:14:10',
+                                                          'version' => '1.27'
+                                                        },
+                                                        {
+                                                          'date' => '2014-06-11T19:33:47',
+                                                          'version' => '1.28_01'
+                                                        },
+                                                        {
+                                                          'date' => '2014-12-11T07:31:36',
+                                                          'version' => '1.28'
+                                                        },
+                                                        {
+                                                          'date' => '2014-12-14T08:32:24',
+                                                          'version' => '1.29_01'
+                                                        },
+                                                        {
+                                                          'date' => '2014-12-15T15:58:26',
+                                                          'version' => '1.29'
+                                                        },
+                                                        {
+                                                          'date' => '2017-04-18T00:21:57',
+                                                          'version' => '1.30_01'
+                                                        },
+                                                        {
+                                                          'date' => '2017-04-20T05:05:41',
+                                                          'version' => '1.30'
+                                                        },
+                                                        {
+                                                          'date' => '2018-10-25T19:22:24',
+                                                          'version' => '1.31'
+                                                        },
+                                                        {
+                                                          'date' => '2020-01-27T22:19:52',
+                                                          'version' => '1.32'
+                                                        },
+                                                        {
+                                                          'date' => '2020-10-26T19:35:28',
+                                                          'version' => '1.33'
+                                                        },
+                                                        {
+                                                          'date' => '2020-10-26T20:20:42',
+                                                          'version' => '1.34'
+                                                        },
+                                                        {
+                                                          'date' => '2025-10-09T22:46:16',
+                                                          'version' => '1.35'
+                                                        },
+                                                        {
+                                                          'date' => '2025-10-10T04:58:28',
+                                                          'version' => '1.36'
+                                                        }
+                                                      ]
+                                      },
                        'YATT-Lite' => {
                                         'advisories' => [
                                                           {
@@ -116419,11 +117130,11 @@ An attacker with limited privileges can exploit this behavior by placing cmd.exe
                                         }
                      },
           'meta' => {
-                      'commit' => '9a496cbd5787a2720729659e05d02bd236bdd710',
-                      'date' => 'Sun Dec 21 03:58:14 2025',
-                      'epoch' => 1766289494,
+                      'commit' => '46cd42c1918e6aaa640d58e2264d2e12d00aa447',
+                      'date' => 'Sun Jan 11 00:51:42 2026',
+                      'epoch' => 1768092702,
                       'generator' => 'util/generate',
-                      'repo' => 'https://github.com/briandfoy/cpan-security-advisory'
+                      'repo' => 'https://github.com/briandfoy/cpan-security-advisory.git'
                     },
           'module2dist' => {
                              'APR' => 'mod_perl',
@@ -117863,6 +118574,47 @@ An attacker with limited privileges can exploit this behavior by placing cmd.exe
                              'Crypt::Random::Source::Weak::devurandom' => 'Crypt-Random-Source',
                              'Crypt::RandomEncryption' => 'Crypt-RandomEncryption',
                              'Crypt::Salt' => 'Crypt-Salt',
+                             'Crypt::Sodium::XS' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::Base64' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::Core' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::MemVault' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::OO::Base' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::OO::aead' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::OO::auth' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::OO::box' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::OO::curve25519' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::OO::generichash' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::OO::hash' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::OO::hkdf' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::OO::kdf' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::OO::kx' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::OO::onetimeauth' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::OO::pwhash' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::OO::scalarmult' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::OO::secretbox' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::OO::secretstream' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::OO::shorthash' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::OO::sign' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::OO::stream' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::ProtMem' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::Util' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::aead' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::auth' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::box' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::curve25519' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::generichash' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::hash' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::hkdf' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::kdf' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::kx' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::onetimeauth' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::pwhash' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::scalarmult' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::secretbox' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::secretstream' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::shorthash' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::sign' => 'Crypt-Sodium-XS',
+                             'Crypt::Sodium::XS::stream' => 'Crypt-Sodium-XS',
                              'Crypt::Stream::ChaCha' => 'CryptX',
                              'Crypt::Stream::RC4' => 'CryptX',
                              'Crypt::Stream::Rabbit' => 'CryptX',
@@ -118403,17 +119155,26 @@ An attacker with limited privileges can exploit this behavior by placing cmd.exe
                              'ExtUtils::ParseXS::Node::ALIAS' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::ALIAS_line' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::ATTRS' => 'ExtUtils-ParseXS',
+                             'ExtUtils::ParseXS::Node::BOOT' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::CASE' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::CLEANUP' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::CODE' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::C_ARGS' => 'ExtUtils-ParseXS',
+                             'ExtUtils::ParseXS::Node::C_part' => 'ExtUtils-ParseXS',
+                             'ExtUtils::ParseXS::Node::C_part_POD' => 'ExtUtils-ParseXS',
+                             'ExtUtils::ParseXS::Node::C_part_code' => 'ExtUtils-ParseXS',
+                             'ExtUtils::ParseXS::Node::C_part_postamble' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::EXPORT_XSUB_SYMBOLS' => 'ExtUtils-ParseXS',
+                             'ExtUtils::ParseXS::Node::FALLBACK' => 'ExtUtils-ParseXS',
+                             'ExtUtils::ParseXS::Node::INCLUDE' => 'ExtUtils-ParseXS',
+                             'ExtUtils::ParseXS::Node::INCLUDE_COMMAND' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::INIT' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::INPUT' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::INPUT_line' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::INTERFACE' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::INTERFACE_MACRO' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::IO_Param' => 'ExtUtils-ParseXS',
+                             'ExtUtils::ParseXS::Node::MODULE' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::NOT_IMPLEMENTED_YET' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::OUTPUT' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::OUTPUT_line' => 'ExtUtils-ParseXS',
@@ -118425,15 +119186,21 @@ An attacker with limited privileges can exploit this behavior by placing cmd.exe
                              'ExtUtils::ParseXS::Node::PROTOTYPES' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::Param' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::Params' => 'ExtUtils-ParseXS',
+                             'ExtUtils::ParseXS::Node::REQUIRE' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::ReturnType' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::SCOPE' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::Sig' => 'ExtUtils-ParseXS',
+                             'ExtUtils::ParseXS::Node::TYPEMAP' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::VERSIONCHECK' => 'ExtUtils-ParseXS',
+                             'ExtUtils::ParseXS::Node::XS_file' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::autocall' => 'ExtUtils-ParseXS',
+                             'ExtUtils::ParseXS::Node::boot_xsub' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::cleanup_part' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::code_part' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::codeblock' => 'ExtUtils-ParseXS',
+                             'ExtUtils::ParseXS::Node::cpp_scope' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::enable' => 'ExtUtils-ParseXS',
+                             'ExtUtils::ParseXS::Node::global_cpp_line' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::init_part' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::input_part' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::keyline' => 'ExtUtils-ParseXS',
@@ -118442,6 +119209,8 @@ An attacker with limited privileges can exploit this behavior by placing cmd.exe
                              'ExtUtils::ParseXS::Node::multiline_merged' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::oneline' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::output_part' => 'ExtUtils-ParseXS',
+                             'ExtUtils::ParseXS::Node::pre_boot' => 'ExtUtils-ParseXS',
+                             'ExtUtils::ParseXS::Node::preamble' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::xbody' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::xsub' => 'ExtUtils-ParseXS',
                              'ExtUtils::ParseXS::Node::xsub_decl' => 'ExtUtils-ParseXS',
@@ -118983,6 +119752,7 @@ An attacker with limited privileges can exploit this behavior by placing cmd.exe
                              'JPL::Compile' => 'perl',
                              'JS::jQuery' => 'JS-jQuery',
                              'JSON::SIMD' => 'JSON-SIMD',
+                             'JSON::Syck' => 'YAML-Syck',
                              'JSON::XS' => 'JSON-XS',
                              'JavaScript::Duktape' => 'JavaScript-Duktape',
                              'JavaScript::Duktape::Bool' => 'JavaScript-Duktape',
@@ -122202,13 +122972,16 @@ An attacker with limited privileges can exploit this behavior by placing cmd.exe
                              'YAML::Any' => 'YAML',
                              'YAML::Dumper' => 'YAML',
                              'YAML::Dumper::Base' => 'YAML',
+                             'YAML::Dumper::Syck' => 'YAML-Syck',
                              'YAML::Error' => 'YAML',
                              'YAML::LibYAML' => 'YAML-LibYAML',
                              'YAML::Loader' => 'YAML',
                              'YAML::Loader::Base' => 'YAML',
+                             'YAML::Loader::Syck' => 'YAML-Syck',
                              'YAML::Marshall' => 'YAML',
                              'YAML::Mo' => 'YAML',
                              'YAML::Node' => 'YAML',
+                             'YAML::Syck' => 'YAML-Syck',
                              'YAML::Tag' => 'YAML',
                              'YAML::Type::blessed' => 'YAML',
                              'YAML::Type::code' => 'YAML',

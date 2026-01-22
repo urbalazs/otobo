@@ -2,7 +2,7 @@
 # OTOBO is a web-based ticketing system for service organisations.
 # --
 # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
-# Copyright (C) 2019-2025 Rother OSS GmbH, https://otobo.io/
+# Copyright (C) 2019-2026 Rother OSS GmbH, https://otobo.io/
 # --
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -568,7 +568,7 @@ sub Run {
         ) || 0;
 
         if ( $Success == 1 ) {
-            $Message = $LayoutObject->{LanguageObject}->Translate('Translations deployed successfuly!');
+            $Message = $LayoutObject->{LanguageObject}->Translate('Translations deployed successfully!');
         }
         elsif ( $Success == 2 ) {
             $Message = $LayoutObject->{LanguageObject}->Translate('Nothing to do!');

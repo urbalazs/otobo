@@ -2,7 +2,7 @@
 # OTOBO is a web-based ticketing system for service organisations.
 # --
 # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
-# Copyright (C) 2019-2025 Rother OSS GmbH, https://otobo.io/
+# Copyright (C) 2019-2026 Rother OSS GmbH, https://otobo.io/
 # --
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -266,7 +266,7 @@ sub _CheckOTRSRelease {
             Message => $Message,
             Comment => $Self->{LanguageObject}->Translate("No OTRS system found!"),
             Comment => $Self->{LanguageObject}->Translate(
-                "Unknown PRODUCT found in OTRS RELASE file: %s. Expected values are %s.",
+                "Unknown PRODUCT found in OTRS RELEASE file: %s. Expected values are %s.",
                 $Location,
                 $ExpectedNames
             ),

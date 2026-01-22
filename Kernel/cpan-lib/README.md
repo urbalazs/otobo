@@ -29,11 +29,16 @@ Only update modules where the version was updated in F<Kernel/cpan-lib/cpanfile>
     rm -rf local/lib/perl5/x86_64-linux-gnu-thread-multi                    # contains only perllocal.pod, exact path depends on host
     find local/lib/perl5 \( -name "*.pl" \) -delete
     find local/lib/perl5 \( -name "*.pod" \) -delete
+    tree local/lib/perl5                                                    # check sanity
     cp -r local/lib/perl5/* .                                               # copy to actual destination
 
-Then examine the diffs and check in the verified changes.
+Then examine the differences and check in the verified changes.
 
-Finally clean up the temporary installation dir again:
+    git diff
+    git add --patch
+    git commit
+
+Finally clean up the temporary installation directory again:
 
     rm -rf local
 
@@ -58,6 +63,7 @@ The reason why specific files are not included in the bundle is not always evide
     rm -rf Apache Devel::Type::Tiny LWP/Debug # Apache::SOAP and others are not needed
     rm Class/Accessor/Faster.pm Net/IMAP/SimpleX.pm SOAP/Test.pm
     (cd IO; rm SessionData.pm SessionSet.pm)  # requested by SOAP::Lite, but not actually used
+    (cd Net/SSLGlue; rm FTP.pm LDAP.pm LWP.pm Socket.pm)
     (cd SOAP/Transport; rm IO.pm LOCAL.pm LOOPBACK.pm MAILTO.pm POP3.pm TCP.pm)
     find . \( -name "*.pl" \) -delete         # just because this is the tradition
     find . \( -name "*.pod" \) -delete        # just because this is the tradition

@@ -109,7 +109,7 @@ requires 'Plack::Middleware::Header';
 requires 'Plack::Middleware::ReverseProxy';
 
 
-# Feature 'apache:mod_perl' is not needed for Docker
+# Feature 'apache:mod_perl' is not needed
 
 
 # feature 'auth:openidconnect', 'Support for feature auth:openidconnect' => sub {
@@ -134,7 +134,7 @@ requires 'Plack::Middleware::ReverseProxy';
 
 # };
 
-# Feature 'db:oracle' is not needed for Docker
+# Feature 'db:oracle' is not needed
 
 
 # feature 'db:postgresql', 'Support for database PostgreSQL' => sub {
@@ -314,7 +314,7 @@ requires 'Plack::Middleware::ReverseProxy';
 
 # };
 
-# Feature 'optional' is not needed for Docker
+# Feature 'optional' is not needed
 
 
 # feature 'performance:redis', 'Modules for running with Redis Cache Server' => sub {
